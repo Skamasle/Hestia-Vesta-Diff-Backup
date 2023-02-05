@@ -184,7 +184,7 @@ This system make two backups
 
 The regular backup as always with database, configurations, email passwords, users and any orther data stored in remote or local dir /backup/USER.2023-02-05_12-49-37.tar
 
-And store files and emails in remote or local directory
+And store incremental backup for files files and emails in remote or local directory.
 
 So if you delete entery account you will need first restore a regular backup and before that restore diferencial backup ( this will be work by default some day )
 
