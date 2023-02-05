@@ -191,4 +191,42 @@ So if you delete entery account you will need first restore a regular backup and
 Both backups, hestia / vesta and duplicity can be stored in remote server, event you can send panel backup to one server and diferrencial backup to other server, for my needs this works perfect.
 
 
+# Why duplicity
+
+Change just a line you can send backups to diferente location
+```
+
+Backends and their URL formats:
+  azure://container_name
+  b2://account_id[:application_key]@bucket_name/[some_dir/]
+  boto3+s3://bucket_name[/prefix]
+  cf+http://container_name
+  dpbx:///some_dir
+  file:///some_dir
+  ftp://user[:password]@other.host[:port]/some_dir
+  ftps://user[:password]@other.host[:port]/some_dir
+  gdocs://user[:password]@other.host/some_dir
+  hsi://user[:password]@other.host[:port]/some_dir
+  imap://user[:password]@other.host[:port]/some_dir
+  mega://user[:password]@other.host/some_dir
+  megav2://user[:password]@other.host/some_dir
+  mf://user[:password]@other.host/some_dir
+  onedrive://some_dir
+  pca://container_name
+  pydrive://user@other.host/some_dir
+  rclone://remote:/some_dir
+  rsync://user[:password]@other.host[:port]/relative_path
+  rsync://user[:password]@other.host[:port]//absolute_path
+  rsync://user[:password]@other.host[:port]::/module/some_dir
+  s3+http://bucket_name[/prefix]
+  s3://other.host[:port]/bucket_name[/prefix]
+  scp://user[:password]@other.host[:port]/some_dir
+  ssh://user[:password]@other.host[:port]/some_dir
+  swift://container_name
+  tahoe://alias/directory
+  webdav://user[:password]@other.host/some_dir
+  webdavs://user[:password]@other.host/some_dir
+```
+
+Same configuration is used to send backups to amazon, one drive, ftp, dropbox no extra configuration needed, just change conection data and destination.
 
