@@ -24,22 +24,43 @@ How this looks when you do a backup
 # v-backup-diff-user maks
 
 -- SYSTEM --
-2023-02-05 14:10:17 maks.conf
-2023-02-05 14:10:17 stats.log
-2023-02-05 14:10:17 history.log
-2023-02-05 14:10:17 pam
+2023-02-05 14:40:24 maks.conf
+2023-02-05 14:40:24 stats.log
+2023-02-05 14:40:24 history.log
+2023-02-05 14:40:24 pam
 
 
 -- WEB --
-2023-02-05 14:10:17 testmaks.com
+2023-02-05 14:40:24 testmaks.com
 Local and Remote metadata are synchronized, no sync needed.
-Last full backup date: Sun Feb  5 14:06:33 2023
+Last full backup date: Sun Feb  5 14:38:49 2023
 --------------[ Backup Statistics ]--------------
-StartTime 1675602617.25 (Sun Feb  5 14:10:17 2023)
-EndTime 1675602618.29 (Sun Feb  5 14:10:18 2023)
-ElapsedTime 1.04 (1.04 seconds)
-SourceFiles 9815
-SourceFileSize 223855189 (213 MB)
+StartTime 1675604424.62 (Sun Feb  5 14:40:24 2023)
+EndTime 1675604430.20 (Sun Feb  5 14:40:30 2023)
+ElapsedTime 5.58 (5.58 seconds)
+SourceFiles 13061
+SourceFileSize 290275014 (277 MB)
+NewFiles 6524
+NewFileSize 132936502 (127 MB)
+DeletedFiles 3261
+ChangedFiles 0
+ChangedFileSize 0 (0 bytes)
+ChangedDeltaSize 0 (0 bytes)
+DeltaEntries 9785
+RawDeltaSize 130167606 (124 MB)
+TotalDestinationSizeChange 45389188 (43.3 MB)
+Errors 0
+-------------------------------------------------
+
+2023-02-05 14:40:30 maks2.com
+Local and Remote metadata are synchronized, no sync needed.
+Last full backup date: Sun Feb  5 14:38:57 2023
+--------------[ Backup Statistics ]--------------
+StartTime 1675604430.79 (Sun Feb  5 14:40:30 2023)
+EndTime 1675604430.79 (Sun Feb  5 14:40:30 2023)
+ElapsedTime 0.00 (0.00 seconds)
+SourceFiles 15
+SourceFileSize 44330 (43.3 KB)
 NewFiles 0
 NewFileSize 0 (0 bytes)
 DeletedFiles 0
@@ -48,87 +69,66 @@ ChangedFileSize 0 (0 bytes)
 ChangedDeltaSize 0 (0 bytes)
 DeltaEntries 0
 RawDeltaSize 0 (0 bytes)
-TotalDestinationSizeChange 501 (501 bytes)
+TotalDestinationSizeChange 500 (500 bytes)
 Errors 0
 -------------------------------------------------
 
-2023-02-05 14:10:18 maks2.com
-Local and Remote metadata are synchronized, no sync needed.
-Last full backup date: Sun Feb  5 14:06:42 2023
---------------[ Backup Statistics ]--------------
-StartTime 1675602618.47 (Sun Feb  5 14:10:18 2023)
-EndTime 1675602619.53 (Sun Feb  5 14:10:19 2023)
-ElapsedTime 1.06 (1.06 seconds)
-SourceFiles 9815
-SourceFileSize 223855189 (213 MB)
-NewFiles 0
-NewFileSize 0 (0 bytes)
-DeletedFiles 0
-ChangedFiles 0
-ChangedFileSize 0 (0 bytes)
-ChangedDeltaSize 0 (0 bytes)
-DeltaEntries 0
-RawDeltaSize 0 (0 bytes)
-TotalDestinationSizeChange 501 (501 bytes)
-Errors 0
--------------------------------------------------
-
-2023-02-05 14:10:19 *** 2 domains ***
+2023-02-05 14:40:30 *** 2 domains ***
 
 -- DNS --
-2023-02-05 14:10:19 testmaks.com
-2023-02-05 14:10:19 maks2.com
-2023-02-05 14:10:19 *** 2 domains ***
+2023-02-05 14:40:30 testmaks.com
+2023-02-05 14:40:30 maks2.com
+2023-02-05 14:40:30 *** 2 domains ***
 
 -- MAIL --
-2023-02-05 14:10:19 maks2.com
+2023-02-05 14:40:30 maks2.com
 Local and Remote metadata are synchronized, no sync needed.
-Last full backup date: none
-Last full backup is too old, forcing full backup
+Last full backup date: Sun Feb  5 14:38:58 2023
 --------------[ Backup Statistics ]--------------
-StartTime 1675602619.73 (Sun Feb  5 14:10:19 2023)
-EndTime 1675602619.73 (Sun Feb  5 14:10:19 2023)
+StartTime 1675604431.00 (Sun Feb  5 14:40:30 2023)
+EndTime 1675604431.00 (Sun Feb  5 14:40:30 2023)
 ElapsedTime 0.00 (0.00 seconds)
 SourceFiles 2
 SourceFileSize 8192 (8.00 KB)
-NewFiles 2
-NewFileSize 8192 (8.00 KB)
+NewFiles 0
+NewFileSize 0 (0 bytes)
 DeletedFiles 0
 ChangedFiles 0
 ChangedFileSize 0 (0 bytes)
 ChangedDeltaSize 0 (0 bytes)
-DeltaEntries 2
+DeltaEntries 0
 RawDeltaSize 0 (0 bytes)
-TotalDestinationSizeChange 602 (602 bytes)
+TotalDestinationSizeChange 500 (500 bytes)
 Errors 0
 -------------------------------------------------
 
-2023-02-05 14:10:19 *** 1 domain ***
+2023-02-05 14:40:31 *** 1 domain ***
 
 -- DB --
-2023-02-05 14:10:19 *** 0 databases ***
+2023-02-05 14:40:31 *** 0 databases ***
 
 -- CRON --
-2023-02-05 14:10:19 *** 0 jobs ***
+2023-02-05 14:40:31 *** 0 jobs ***
 
 -- User Dir --
-2023-02-05 14:10:19 adding .bash_logout
-2023-02-05 14:10:19 adding .bashrc
-2023-02-05 14:10:19 adding .cache
-2023-02-05 14:10:19 adding .composer
-2023-02-05 14:10:19 adding .config
-2023-02-05 14:10:19 adding .local
-2023-02-05 14:10:19 adding .npm
-2023-02-05 14:10:19 adding .profile
-2023-02-05 14:10:19 adding .ssh
-2023-02-05 14:10:19 adding .vscode-server
-2023-02-05 14:10:19 *** 10 directories ***
+2023-02-05 14:40:31 adding .bash_logout
+2023-02-05 14:40:31 adding .bashrc
+2023-02-05 14:40:31 adding .cache
+2023-02-05 14:40:31 adding .composer
+2023-02-05 14:40:31 adding .config
+2023-02-05 14:40:31 adding .local
+2023-02-05 14:40:31 adding .npm
+2023-02-05 14:40:31 adding .profile
+2023-02-05 14:40:31 adding .ssh
+2023-02-05 14:40:31 adding .vscode-server
+2023-02-05 14:40:31 *** 10 directories ***
 
 -- SUMMARY --
-2023-02-05 14:10:19 Rotated: 2023-02-05_14-06-50
-2023-02-05 14:10:19 Local: /backup/maks.2023-02-05_14-10-19.tar
-2023-02-05 14:10:19 Size: 1 MB
-2023-02-05 14:10:19 Runtime: 1 minute
+2023-02-05 14:40:31 Rotated: 2023-02-05_14-38-58
+2023-02-05 14:40:31 Local: /backup/maks.2023-02-05_14-40-31.tar
+2023-02-05 14:40:31 Size: 1 MB
+2023-02-05 14:40:31 Runtime: 1 minute
+
 
 ```
 
