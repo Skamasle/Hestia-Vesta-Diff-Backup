@@ -134,7 +134,7 @@ Errors 0
 
 # How restore ?
 
-If you lost entery user account you just need restore hestia / vesta backup as always, this will restore all data for you but you will need manually restore data from duplicity storage ( sftp or local )
+If you lost entery user account you just need restore hestia / vesta backup as always, this will restore all data for you but you will need manually restore data from duplicity storage ( remote or local )
 
 Then if you lost a file, just restore it from duplicity backup
 ```
