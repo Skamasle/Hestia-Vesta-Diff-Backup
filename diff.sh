@@ -8,7 +8,7 @@ location=local
 # You can run backup script each day, each hour etc
 # But full backup will rotate each 7 days
 diffDay=7
-#GnuGP key needed
+#GnuGP key needed to encrypt backup
 GNUSer=mail@domain.ltd
 diffDir=/home/backup/diff/
 diffMail=${diffDir}/$user/mail
