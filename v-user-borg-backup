@@ -389,26 +389,25 @@ if [ -n "$WEB_SYSTEM" ] && [ "$WEB" != '*' ]; then
 				fi
 			done
 		fi
-		set +f
 		initWebBorg() {
-		     mkdir -p ${BORGREPO}/$user/${1}_web
-		    /usr/bin/borg init -e $BORGENCRYPT ${BORGREPO}/$user/${1}_web
+		     mkdir -p ${BORGREPOS}/$user/${1}_web
+		    /usr/bin/borg init -e $BORGENCRYPT ${BORGREPOS}/$user/${1}_web
 		}
 		BorgUserWebRepo(){
 		user=$1
-		    if [ ! -d ${BORGREPO}${user}/ ]; then
-		        mkdir -p ${BORGREPO}${user}/
+		    if [ ! -d ${BORGREPOS}${user}/ ]; then
+		        mkdir -p ${BORGREPOS}${user}/
 		    fi
 		    if [ ! -f ${BORGREPOS}/${user}/${domain}_web/config ] ; then
 		        initWebBorg $domain
 		    fi
 		}
 		
-        if [[ "$location" == "local" ]]; then
-        BorgUserWebRepo $user
-        /usr/bin/borg create --stats --compression auto,zstd ${BORGREPOS}/${user}/${domain}_web::${time} . 
-        /usr/bin/borg prune -v --list --dry-run --keep-daily=${KEEPDAILY} --keep-weekly=${KEEPWEEKLY} ${BORGREPOS}/${user}/${domain}_web
-        fi
+#	        if [[ "$location" == "local" ]]; then
+			 BorgUserWebRepo $user
+        		/usr/bin/borg create --stats --compression auto,zstd ${BORGREPOS}/${user}/${domain}_web::${BORGRFORMAT} . 
+        		/usr/bin/borg prune -v --list --dry-run --keep-daily=${KEEPWEBDAILY} --keep-weekly=${KEEPWEBWEEKLY} ${BORGREPOS}/${user}/${domain}_web
+#        	fi
 
 		# Backup files
 		#if [ "$BACKUP_MODE" = 'zstd' ]; then
@@ -536,13 +535,13 @@ if [ -n "$MAIL_SYSTEM" ] && [ "$MAIL" != '*' ]; then
 			fi
 		done
         initBorgMail() {
-		     mkdir -p ${BORGREPO}/$user/${1}_mail
-		    /usr/bin/borg init -e $BORGENCRYPT ${BORGREPO}/$user/${1}_mail
+		     mkdir -p ${BORGREPOS}/$user/${1}_mail
+		    /usr/bin/borg init -e $BORGENCRYPT ${BORGREPOS}/$user/${1}_mail
 		}
 		BorgUserMailRepo(){
 		user=$1
-		    if [ ! -d ${BORGREPO}${user}/ ]; then
-		        mkdir -p ${BORGREPO}${user}/
+		    if [ ! -d ${BORGREPOS}${user}/ ]; then
+		        mkdir -p ${BORGREPOS}${user}/
 		    fi
 		    if [ ! -f ${BORGREPOS}/${user}/${domain}_mail/config ] ; then
 		        initBorgMail $domain
@@ -551,7 +550,7 @@ if [ -n "$MAIL_SYSTEM" ] && [ "$MAIL" != '*' ]; then
 		
         if [[ "$location" == "local" ]]; then
         BorgUserMailRepo $user
-        /usr/bin/borg create --stats --compression auto,zstd ${BORGREPOS}/${user}/${domain}_mail::${time} . 
+        /usr/bin/borg create --stats --compression auto,zstd ${BORGREPOS}/${user}/${domain}_mail::${BORGRFORMAT} . 
         /usr/bin/borg prune -v --list --dry-run --keep-daily=${KEEPMAILDAILY} --keep-weekly=${KEEPMAILWEEKLY} ${BORGREPOS}/${user}/${domain}_mail
         fi
 		# Compress archive
